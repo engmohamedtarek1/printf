@@ -5,7 +5,7 @@
 /**
  * _printf - printf function
  * @format: the format string
- * Description: this function will call the get_print() function that will determine which printing function to call depending on the conversion
+ * Description: this function will call the get_print() function that
  *
  * Return: number of bytes printed
  */

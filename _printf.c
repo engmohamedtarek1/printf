@@ -37,7 +37,9 @@ int _printf(const char *format, ...)
 			while (get_flag(*pointer, &flags))
 				pointer++;
 			pointer_function = get_print(*pointer);
-			cnt = cnt + pointer_function ? pointer_function(args, &flags) : _printf("%%%c", *pointer);
+			cnt = cnt + (pointer_function
+			? pointer_function(args, &flags)
+			: _printf("%%%c", *pointer));
 		} else
 			cnt = cnt + _putchar(*pointer);
 	}

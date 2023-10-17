@@ -55,7 +55,7 @@ int print_binary(va_list l, flags_t *f)
  * print_octal - prints unsigned octal number
  * @l: va_list arguments
  * @f: the parameters struct
- * 
+ *
  * Return: number bytes printed
  */
 int print_octal(va_list l, flags_t *f)

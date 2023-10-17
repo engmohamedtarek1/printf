@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * get_print - selects the right printing function depending on the conversion specifier passed to _printf
+ * get_print - selects the right printing function
  * @s: the format string
  * Description: the function loops through the structs array
  * array_function[] to find a match between the specifier passed to _printf
- * and the first element of the struct, and then the approriate printing function
+ * and the first element of the struct, and then approriate printing function
  *
  * Return: the number of bytes printed
  */
