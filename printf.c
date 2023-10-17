@@ -3,11 +3,12 @@
 #include <stdio.h>
 
 /**
- * _printf - printf function
- * @format: the format string
- * Description: this function will call the get_print() function that will determine which printing function to call depending on the conversion
- *
- * Return: number of bytes printed
+ * _printf - produces output according to a format
+ * @format: format string containing the characters and the specifiers
+ * Description: this function will call the get_print() function that will
+ * determine which printing function to call depending on the conversion
+ * specifiers contained into fmt
+ * Return: length of the formatted output string
  */
 int _printf(const char *format, ...)
 {
@@ -19,7 +20,6 @@ int _printf(const char *format, ...)
 	register int cnt = 0;
 
 	va_start(args, format);
-
 	if (format[1] == ' ' && format[0] == '%' && !format[2])
 		return (-1);
 	if (!format || (format[0] == '%' && !format[1]))
@@ -37,12 +37,11 @@ int _printf(const char *format, ...)
 			while (get_flag(*pointer, &flags))
 				pointer++;
 			pointer_function = get_print(*pointer);
-			cnt = cnt + pointer_function ? pointer_function(args, &flags) : _printf("%%%c", *pointer);
+			cnt = cnt + (pointer_function ? pointer_function(args, &flags) : _printf("%%%c", *pointer));
 		} else
 			cnt = cnt + _putchar(*pointer);
 	}
 	_putchar(-1);
 	va_end(args);
 	return (cnt);
-
 }
