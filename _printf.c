@@ -12,7 +12,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int (pointer_function),( va_list, flags_t *);
+	int (pointer_function),( va_list),( flags_t *);
 	const char *pointer;
 	va_list args;
 	flags_t flags = {0, 0, 0};
