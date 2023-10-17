@@ -37,13 +37,15 @@ int _printf(const char *format, ...)
 			while (get_flag(*pointer, &flags))
 				pointer++;
 			pointer_function = get_print(*pointer);
-<<<<<<< HEAD
+< << << << HEAD
 			cnt = cnt + (pointer_function
 			? pointer_function(args, &flags)
 			: _printf("%%%c", *pointer));
-=======
-			cnt = cnt + (pointer_function ? pointer_function(args, &flags) : _printf("%%%c", *pointer));
->>>>>>> b693260a9037d9d657770d983fb3412baaec5e1b
+== == == =
+			cnt = cnt + (pointer_function
+			? pointer_function(args, &flags)
+			: _printf("%%%c", *pointer));
+>> >> >> > b693260a9037d9d657770d983fb3412baaec5e1b
 		} else
 			cnt = cnt + _putchar(*pointer);
 	}

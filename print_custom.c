@@ -63,11 +63,11 @@ int print_rot13(va_list l, flags_t *f)
 }
 
 /**
- * print_percent - prints a percent
- * @l: va_list arguments from _printf
- * @f: pointer to the struct flags in which we turn the flags on
- * Return: number bytes printed
- */
+* print_percent - prints a percent
+* @l: va_list arguments from _printf
+* @f: pointer to the struct flags in which we turn the flags on
+* Return: number bytes printed
+*/
 int print_percent(va_list l, flags_t *f)
 {
 	(void)l;
@@ -75,14 +75,13 @@ int print_percent(va_list l, flags_t *f)
 	return (_putchar(' % '));
 }
 
-
 /**
- * print_bigS - Non printable characters
- * value in hexadecimal (upper case - always 2 characters)
- * @l: list of arguments
- * @f: the parameters struct
- * Return: number bytes printed
- */
+* print_bigS - Non printable characters
+* value in hexadecimal (upper case - always 2 characters)
+* @l: list of arguments
+* @f: the parameters struct
+* Return: number bytes printed
+*/
 int print_bigS(va_list l, flags_t *f)
 {
 	int i, cnt = 0;
