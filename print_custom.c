@@ -43,11 +43,9 @@ int print_rot13(va_list l, flags_t *f)
 	(void)f;
 	for (j = 0; s[j]; j++)
 	{
-		if (s[j] > 'z' || (s[j] < 'a' && s[j] > 'Z') || s[j] < 'A)
-		{
+		if (s[j] > 'z' || (s[j] < 'a' && s[j] > 'Z') || s[j] < 'A'){
 			_putchar(s[j]);
-		}
-		else
+		}else
 		{
 			for (i = 0; i <= 52; i++)
 
@@ -72,7 +70,7 @@ int print_percent(va_list l, flags_t *f)
 {
 	(void)l;
 	(void)f;
-	return (_putchar(' % '));
+	return (_putchar( '%' ));
 }
 
 /**
